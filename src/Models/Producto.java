@@ -5,7 +5,6 @@ import java.time.format.DateTimeParseException;
 
 public abstract class Producto {
 
-    //*********** Atributos de la clase ***********//
 
     private String id;
     private String descripcion;
@@ -17,12 +16,10 @@ public abstract class Producto {
     private boolean esImportado;
     private double precioVenta;
 
-    //*********** Constructor vacío ***********//
 
     public Producto() {
     }
 
-    //*********** Constructor de la clase ***********//
 
     public Producto(String id, String descripcion, int cantidadStock, double precioUnidad, double porcentajeGanancia, boolean disponibleVenta, double porcDescuento, boolean esImportado) {
         this.id = id;
@@ -36,7 +33,6 @@ public abstract class Producto {
         this.precioVenta = calcularPrecioVenta();
     }
 
-    //*********** Métodos Getter ***********//
 
     public String getId() {
         return id;
@@ -70,7 +66,6 @@ public abstract class Producto {
         return precioVenta;
     }
 
-    //*********** Métodos Setter ***********//
 
     public void setDisponibleVenta(boolean disponibleVenta) {
         this.disponibleVenta = disponibleVenta;
@@ -80,7 +75,6 @@ public abstract class Producto {
         this.cantidadStock = cantidadStock;
     }
 
-    //*********** Métodos de la Clase ***********//
 
     public double calcularDescuento() {
         return precioUnidad * (porcDescuento / 100);
@@ -100,7 +94,6 @@ public abstract class Producto {
     }
 
 
-    //*********** Metodos propios (Validaciones) ***********//
 
 
     public void validarPorcentajeDesc(double porcDescuento){}

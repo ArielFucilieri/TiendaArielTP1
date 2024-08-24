@@ -2,7 +2,6 @@ package Models;
 
 public class Bebidas extends Producto {
 
-    //*********** Atributos de la clase ***********//
 
 
     private String fechaVencimiento;
@@ -11,12 +10,9 @@ public class Bebidas extends Producto {
     private boolean esComestible;
 
 
-    //*********** Constructor vacio *********** //
-
     public Bebidas() {
     }
 
-    //*********** Constructor de la clase ***********//
 
 
     public Bebidas(String id, String descripcion, int cantidadStock, double precioUnidad, double porcentajeGanancia, boolean disponibleVenta, double porcDescuento, boolean esImportado, String fechaVencimiento, double calorias, double graduacionAlcoholica, boolean esImportado1, boolean esComestible) {
@@ -33,7 +29,6 @@ public class Bebidas extends Producto {
     }
 
 
-    //*********** Metodos propios  ***********//
 
     public double calcularCalorias(double graduacionAlcoholica){
         double caloriasFinal;
@@ -47,7 +42,6 @@ public class Bebidas extends Producto {
     }
 
 
-    //*********** Metodos propios (Validaciones) ***********//
 
 
     private void validarPorcentajeGanancia(double porcentajeGanancia) {

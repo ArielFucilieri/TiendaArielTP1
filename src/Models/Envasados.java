@@ -2,7 +2,6 @@ package Models;
 
 public class Envasados extends Producto {
 
-    //*********** Atributos de la clase ***********//
 
     private String  fechaVencimiento;
     private int calorias;
@@ -10,12 +9,10 @@ public class Envasados extends Producto {
     private boolean esComestible;
 
 
-    //*********** Constructor vacio *********** //
 
     public Envasados() {
     }
 
-    //*********** Constructor de la clase ***********//
 
 
     public Envasados(String id, String descripcion, int cantidadStock, double precioUnidad, double porcentajeGanancia, boolean disponibleVenta, double porcDescuento, boolean esImportado, String fechaVencimiento, int calorias, String tipoEnvase, boolean esImportado1, boolean esComestible) {
@@ -32,7 +29,6 @@ public class Envasados extends Producto {
     }
 
 
-    //*********** Metodos propios (Validaciones) ***********//
 
 
     private void validarPorcentajeGanancia(double porcentajeGanancia) {

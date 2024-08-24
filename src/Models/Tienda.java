@@ -5,19 +5,15 @@ import java.util.stream.Collectors;
 
 public class Tienda {
 
-    //*********** Atributos de la clase ***********//
     private String nombre;
     private int maxStock;
     private double saldo;
     private HashMap <String, Producto> stock = new HashMap<>();
 
 
-    //*********** Constructor vacio *********** //
-
     public Tienda() {
     }
 
-    //*********** Constructor de la clase ***********//
 
     public Tienda(String nombre, int maxStock, double saldo) {
         this.nombre = nombre;
@@ -26,7 +22,6 @@ public class Tienda {
     }
 
 
-    //*********** Metodos propios ***********//
     public int consultarStock(){
         int stockActual = 0;
         for (Producto p : stock.values()) {
@@ -35,7 +30,6 @@ public class Tienda {
         return stockActual;
     }
 
-    //*********** Comprar ***********//
     public double comprarProducto(double precioUnidad, int cantidad) {
         if (this.saldo < precioUnidad * cantidad) {
             System.out.println("El producto no podrá ser agregado a la tienda por saldo insuficiente en la caja, " +
@@ -47,8 +41,6 @@ public class Tienda {
         return this.saldo;
     }
 
-
-    //*********** Agregar productos ***********//
 
     public boolean agregarProducto(Producto producto, int cantidad) {
         int stockActual = 0;
@@ -72,7 +64,6 @@ public class Tienda {
         return true;
     }
 
-    //*********** Ventas ***********//
 
     public boolean realizarVenta(List<Producto> productosVenta, List<Integer> cantidades) {
         if (productosVenta.size() > 3) {
@@ -174,7 +165,6 @@ public class Tienda {
     }
 
 
-    //*********** Requerimientos adicionales ***********//
 
     public List<String> obtenerComestiblesConMenorDescuento(double porcentajeDescuento) {
         return stock.values().stream()

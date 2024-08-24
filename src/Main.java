@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         // Crear una tienda con un saldo inicial
 
-         Tienda tiendaAriel = new Tienda("TiendaTest", 1000, 5000);
+         Tienda tiendaAriel = new Tienda("TiendaAriel", 1000, 5000);
 
         // Crear productos de cada tipo
 
@@ -23,10 +23,10 @@ public class Main {
             Envasados fideos = new Envasados("AB006", "Fideos", 35, 30, 12, true, 7, false, "2025-04-27", 280, "Caja", true, true);
 
             System.out.println("********************* Creando productos de Limpieza *********************");
-            Limpieza lavandina = new Limpieza("AZ003", "Lavandina", 30, 35, 18, true, 8, false, TipoAplicacion.MULTIUSO);
-            Limpieza jabon = new Limpieza("AZ004", "Jabón Líquido", 15, 25, 22, true, 10, false, TipoAplicacion.COCINA);
-            Limpieza lipiavidrios = new Limpieza("AZ005", "Limpiavidrios", 20, 28, 25, true, 15, false, TipoAplicacion.MULTIUSO);
-            Limpieza limpiador = new Limpieza("AZ006", "Limpiador de pisos", 25, 30, 19, true, 12, false, TipoAplicacion.MULTIUSO);
+            Limpieza lavandina = new Limpieza("AZ003", "Lavandina", 30, 35, 18, true, 8, false, Limpieza.TipoAplicacion.MULTIUSO);
+            Limpieza jabon = new Limpieza("AZ004", "Jabón Líquido", 15, 25, 22, true, 10, false, Limpieza.TipoAplicacion.COCINA);
+            Limpieza lipiavidrios = new Limpieza("AZ005", "Limpiavidrios", 20, 28, 25, true, 15, false, Limpieza.TipoAplicacion.MULTIUSO);
+            Limpieza limpiador = new Limpieza("AZ006", "Limpiador de pisos", 25, 30, 19, true, 12, false, Limpieza.TipoAplicacion.MULTIUSO);
 
 
 
@@ -141,13 +141,13 @@ public class Main {
 
         //Arrojara un error al intentar instanciar la clase Limpieza debido a que tipoAplicacion es Multiuso
         // y su % de ganancia es mayor a 25
-        //Limpieza limpiador = new Limpieza("AZ", "Limpiador de pisos", 25, 30, 26, true, 21, false, TipoAplicacion.MULTIUSO);
+        //Limpieza limpiador = new Limpieza("AZ", "Limpiador de pisos", 25, 30, 26, true, 21, false, Limpieza.TipoAplicacion.MULTIUSO);
 
         //Arrojara un error al intentar instanciar la clase Limpieza debido a que el porcentaje de descuento es mayor a 20
-        //Limpieza limpiador = new Limpieza("AZ111", "Limpiador de pisos", 25, 30, 19, true, 21, false, TipoAplicacion.MULTIUSO);
+        //Limpieza limpiador = new Limpieza("AZ111", "Limpiador de pisos", 25, 30, 19, true, 21, false, Limpieza.TipoAplicacion.MULTIUSO);
 
         //Arrojara un error al intentar instanciar la clase Limpieza debido a que el Id no es correcto
-        //Limpieza limpiador = new Limpieza("AZ111", "Limpiador de pisos", 25, 30, 19, true, 12, false, TipoAplicacion.MULTIUSO);
+        //Limpieza limpiador = new Limpieza("AZ111", "Limpiador de pisos", 25, 30, 19, true, 12, false, Limpieza.TipoAplicacion.MULTIUSO);
 
     }
 }

@@ -2,18 +2,18 @@ package Models;
 
 public class Limpieza extends Producto {
 
-    //*********** Atributos de la clase ***********//
+    public enum TipoAplicacion {
+        COCINA, BANIO, ROPA, MULTIUSO
+    }
 
     private TipoAplicacion tipoAplicacion;
 
 
 
-    //*********** Constructor vacio *********** //
 
     public Limpieza() {
     }
 
-    //*********** Constructor de la clase ***********//
 
 
     public Limpieza(String id, String descripcion, int cantidadStock, double precioUnidad, double porcentajeGanancia, boolean disponibleVenta, double porcDescuento, boolean esImportado, TipoAplicacion tipoAplicacion) {
@@ -26,7 +26,6 @@ public class Limpieza extends Producto {
     }
 
 
-    //*********** Metodos propios (Validaciones) ***********//
 
     private void validarPorcentajeGanancia(double porcentajeGanancia) {
         if (tipoAplicacion != TipoAplicacion.COCINA && tipoAplicacion != TipoAplicacion.MULTIUSO) {
